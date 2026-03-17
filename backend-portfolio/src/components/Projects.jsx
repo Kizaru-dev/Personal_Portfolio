@@ -2,44 +2,36 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, Code2, ArrowUpRight } from 'lucide-react';
 import netflixBlogImage from '../assets/refined-netflix-blog.png';
+import youtubeToolsImage from '../assets/youtube-tools.jpg';
+import resumeAiImage from '../assets/ai-resume.jpg';
 const Projects = () => {
     const projects = [
         {
             title: "YouTube Creator Tools",
             category: "Web Application",
-            image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=2074&auto=format&fit=crop",
+            image: youtubeToolsImage,
             description: "A comprehensive suite of next-generation creator tools. Features SEO tag generation, competitor video data analysis, and AI-powered thumbnail creation to accelerate channel growth and organic reach.",
             tech: ["React", "TailwindCSS", "YouTube API", "Node.js"],
-            liveLink: "https://youtube-automation-kit-1.onrender.com/"
+            liveLink: "https://youtube-automation-kit-1.onrender.com/",
+            githubLink: "https://github.com/Kizaru-dev/youtube-automation-kit"
         },
         {
             title: "AI Resume Generator",
             category: "AI Application",
-            image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=2070&auto=format&fit=crop",
+            image: resumeAiImage,
             description: "An intelligent, AI-powered resume builder utilizing deep AI models to craft professional, ATS-friendly resumes in minutes. Simply describe yourself naturally and let AI comprehensively highlight your unique strengths.",
             tech: ["React", "DaisyUI", "AI Models", "Vite"],
-            liveLink: "https://ai-resume-generator-smoky.vercel.app/"
+            liveLink: "https://ai-resume-generator-smoky.vercel.app/",
+            githubLink: "https://github.com/Kizaru-dev/ai-resume-generator"
         },
         {
             title: "Netflix-Style Blogging Platform",
             category: "Full Stack",
             image: netflixBlogImage,
             description: "A premium, cinematic blogging application built with Spring Boot. Features glassmorphism, cinematic typography, and high-end Netflix-inspired UI.",
-            tech: ["Spring Boot", "MySQL", "Thymeleaf", "Java 21"]
-        },
-        {
-            title: "Secure E-Commerce Backend",
-            category: "API Development",
-            image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2070&auto=format&fit=crop",
-            description: "High-performance transactional backend heavily focused on ACID compliance and security protocols.",
-            tech: ["Spring Security", "PostgreSQL", "Kafka", "Docker"]
-        },
-        {
-            title: "Microservices Infrastructure",
-            category: "Systems Design",
-            image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop",
-            description: "Distributed banking system simulation deployed on Kubernetes with advanced fault tolerance.",
-            tech: ["Kubernetes", "AWS", "Circuit Breaker", "gRPC"]
+            tech: ["Spring Boot", "MySQL", "Thymeleaf", "Java 21"],
+            liveLink: null,
+            githubLink: "https://github.com/Kizaru-dev/Personal_Portfolio_Final" 
         }
     ];
 
@@ -77,9 +69,15 @@ const Projects = () => {
                             <div className="relative overflow-hidden h-56">
                                 <div className="absolute inset-0 bg-primary/40 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
                                 <div className="absolute top-4 right-4 z-20 translate-x-12 group-hover:translate-x-0 transition-transform duration-300 flex gap-2">
-                                    <button className="p-2 bg-slate-900/80 backdrop-blur-sm text-white rounded-lg hover:bg-accent hover:text-white transition-colors">
-                                        <Github size={18} />
-                                    </button>
+                                    {project.githubLink ? (
+                                        <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="p-2 bg-slate-900/80 backdrop-blur-sm text-white rounded-lg hover:bg-accent hover:text-white transition-colors" title="View Source">
+                                            <Github size={18} />
+                                        </a>
+                                    ) : (
+                                        <button className="p-2 bg-slate-900/80 backdrop-blur-sm text-white rounded-lg hover:bg-accent hover:text-white transition-colors">
+                                            <Github size={18} />
+                                        </button>
+                                    )}
                                     {project.liveLink ? (
                                         <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="p-2 bg-slate-900/80 backdrop-blur-sm text-white rounded-lg hover:bg-accent hover:text-white transition-colors" title="Live Site">
                                             <ArrowUpRight size={18} />
