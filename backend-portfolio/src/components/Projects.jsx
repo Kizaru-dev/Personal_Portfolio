@@ -2,8 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, Code2, ArrowUpRight } from 'lucide-react';
 import netflixBlogImage from '../assets/refined-netflix-blog.png';
-import youtubeToolsImage from '../assets/youtube-tools.jpg';
-import resumeAiImage from '../assets/ai-resume.jpg';
+import youtubeToolsImage from '../assets/youtube.png';
+import resumeAiImage from '../assets/airesume.png';
 const Projects = () => {
     const projects = [
         {
@@ -11,7 +11,7 @@ const Projects = () => {
             category: "Web Application",
             image: youtubeToolsImage,
             description: "A comprehensive suite of next-generation creator tools. Features SEO tag generation, competitor video data analysis, and AI-powered thumbnail creation to accelerate channel growth and organic reach.",
-            tech: ["React", "TailwindCSS", "YouTube API", "Node.js"],
+            tech: ["React", "TailwindCSS", "YouTube API", "SpringBoot"],
             liveLink: "https://youtube-automation-kit-1.onrender.com/",
             githubLink: "https://github.com/Kizaru-dev/youtube-automation-kit"
         },

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Linkedin, Send } from 'lucide-react';
+import { Mail, Linkedin, Send, Github } from 'lucide-react';
 
 const Contact = () => {
     return (
@@ -89,17 +89,17 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <p className="text-sm text-slate-400 mb-1">Email</p>
-                                    <a href="mailto:contact@backendportfolio.com" className="text-white hover:text-accent transition-colors">contact@backendportfolio.com</a>
+                                    <a href="mailto:priyanshusinghppii@gmail.com" className="text-white hover:text-accent transition-colors">priyanshusinghppii@gmail.com</a>
                                 </div>
                             </div>
 
                             <div className="flex items-start gap-4">
                                 <div className="p-3 bg-blue-500/10 rounded-lg text-blue-400 mt-1">
-                                    <Linkedin size={20} />
+                                    <Github size={20} />
                                 </div>
                                 <div>
-                                    <p className="text-sm text-slate-400 mb-1">LinkedIn</p>
-                                    <a href="https://linkedin.com/in/backendfolio" className="text-white hover:text-accent transition-colors">linkedin.com/in/backendfolio</a>
+                                    <p className="text-sm text-slate-400 mb-1">GitHub</p>
+                                    <a href="https://github.com/Kizaru-dev" target="_blank" rel="noopener noreferrer" className="text-white hover:text-accent transition-colors">github.com/Kizaru-dev</a>
                                 </div>
                             </div>
                         </div>
@@ -115,7 +115,7 @@ const Contact = () => {
 
                 {/* Footer in Contact Section */}
                 <div className="border-t border-slate-800 mt-20 pt-8 text-center text-slate-500 text-sm">
-                    <p>© {new Date().getFullYear()} Backend-Portfolio. All rights reserved.</p>
+                    <p>© {new Date().getFullYear()} Priyanshu Singh. All rights reserved.</p>
                 </div>
             </div>
         </section>
