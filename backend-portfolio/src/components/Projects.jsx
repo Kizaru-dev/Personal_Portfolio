@@ -5,6 +5,22 @@ import netflixBlogImage from '../assets/refined-netflix-blog.png';
 const Projects = () => {
     const projects = [
         {
+            title: "YouTube Creator Tools",
+            category: "Web Application",
+            image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=2074&auto=format&fit=crop",
+            description: "A comprehensive suite of next-generation creator tools. Features SEO tag generation, competitor video data analysis, and AI-powered thumbnail creation to accelerate channel growth and organic reach.",
+            tech: ["React", "TailwindCSS", "YouTube API", "Node.js"],
+            liveLink: "https://youtube-automation-kit-1.onrender.com/"
+        },
+        {
+            title: "AI Resume Generator",
+            category: "AI Application",
+            image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=2070&auto=format&fit=crop",
+            description: "An intelligent, AI-powered resume builder utilizing deep AI models to craft professional, ATS-friendly resumes in minutes. Simply describe yourself naturally and let AI comprehensively highlight your unique strengths.",
+            tech: ["React", "DaisyUI", "AI Models", "Vite"],
+            liveLink: "https://ai-resume-generator-smoky.vercel.app/"
+        },
+        {
             title: "Netflix-Style Blogging Platform",
             category: "Full Stack",
             image: netflixBlogImage,
@@ -64,9 +80,15 @@ const Projects = () => {
                                     <button className="p-2 bg-slate-900/80 backdrop-blur-sm text-white rounded-lg hover:bg-accent hover:text-white transition-colors">
                                         <Github size={18} />
                                     </button>
-                                    <button className="p-2 bg-slate-900/80 backdrop-blur-sm text-white rounded-lg hover:bg-accent hover:text-white transition-colors">
-                                        <ArrowUpRight size={18} />
-                                    </button>
+                                    {project.liveLink ? (
+                                        <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="p-2 bg-slate-900/80 backdrop-blur-sm text-white rounded-lg hover:bg-accent hover:text-white transition-colors" title="Live Site">
+                                            <ArrowUpRight size={18} />
+                                        </a>
+                                    ) : (
+                                        <button className="p-2 bg-slate-900/80 backdrop-blur-sm text-white rounded-lg hover:bg-accent hover:text-white transition-colors">
+                                            <ArrowUpRight size={18} />
+                                        </button>
+                                    )}
                                 </div>
                                 <img
                                     src={project.image}
