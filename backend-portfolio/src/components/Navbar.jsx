@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, FileText } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import cvFile from '../assets/backend_developer_3-1.pdf';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -40,10 +41,10 @@ const Navbar = () => {
                             {link.name}
                         </a>
                     ))}
-                    <button className="flex items-center gap-2 border border-slate-600 px-4 py-2 rounded-md text-sm text-white hover:bg-slate-800 transition-all hover:border-accent">
+                    <a href={cvFile} download="Priyanshu_CV.pdf" className="flex items-center gap-2 border border-slate-600 px-4 py-2 rounded-md text-sm text-white hover:bg-slate-800 transition-all hover:border-accent">
                         <FileText size={16} />
                         Download CV
-                    </button>
+                    </a>
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -75,10 +76,10 @@ const Navbar = () => {
                                     {link.name}
                                 </a>
                             ))}
-                            <button className="flex items-center justify-center gap-2 border border-slate-600 px-4 py-3 rounded-md text-white hover:bg-slate-800 transition-all w-full">
+                            <a href={cvFile} download="Priyanshu_CV.pdf" className="flex items-center justify-center gap-2 border border-slate-600 px-4 py-3 rounded-md text-white hover:bg-slate-800 transition-all w-full">
                                 <FileText size={18} />
                                 Download CV
-                            </button>
+                            </a>
                         </div>
                     </motion.div>
                 )}
